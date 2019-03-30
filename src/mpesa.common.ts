@@ -3,10 +3,10 @@ export interface AccessTokenParams {
     access_token: string;
     expires_in: string;
 }
-export declare enum TransType {
-    CustomerPayBillOnline = "CustomerPayBillOnline",
-    CustomerBuyGoodsOnline = "CustomerBuyGoodsOnline"
-}
+// export declare enum TransType {
+//     CustomerPayBillOnline = "CustomerPayBillOnline",
+//     CustomerBuyGoodsOnline = "CustomerBuyGoodsOnline"
+// }
 export declare enum Env {
     PRODUCTION = "PRODUCTION",
     SANDBOX = "SANDBOX"
@@ -14,14 +14,16 @@ export declare enum Env {
 export interface TransactionType {
     type: TransType;
 }
-export interface LNMExpressParams {
+export type TransType = "CustomerPayBillOnline" | "CustomerBuyGoodsOnline";
+
+export interface LNMExpress {
     BusinessShortCode: string;
     PassKey: string;
-    Password: string;
-    Timestamp: string;
-    Type: TransactionType;
+    Password?: string;
+    Timestamp?: string;
+    Type: TransType;
     Amount: string;
-    TransactionType: string;
+    TransactionType?: string;
     PartyA: string;
     PartyB: string;
     PhoneNumber: string;
@@ -37,7 +39,8 @@ export interface LNMResult {
     CustomerMessage: string;
 }
 export abstract class Common extends Observable {
-  abstract initialize(customerKey: string, custoemrSecret: string): Promise<string>;
+  abstract initialize(customerKey: string, custoemrSecret: string, env: 'SANDBOX'|'PRODUCTION'): Promise<string>;
+  abstract requestMPESAExpress(lnmExpress: LNMExpress): Promise<LNMResult>;
   constructor() {
       super();
   }
