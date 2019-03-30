@@ -9,6 +9,11 @@ export class HelloWorldModel extends Observable {
     super();
 
     this.mpesa = new Mpesa();
-    this.message = this.mpesa.message;
+    this.mpesa.initialize("Uku3wUhDw9z0Otdk2hUAbGZck8ZGILyh",  "JDjpQBm5HpYwk38b").
+            then(res => {
+              console.log("result", res);
+            }, err => {
+              console.log("error", err);
+            });
   }
 }
