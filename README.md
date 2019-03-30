@@ -1,6 +1,6 @@
 # NativeScript Mpesa
 
-Nativescript-Mpesa provides a wrapper that incorporate payments using Mpesa from within your {N} applications. The integration is achieved using the [Android M-Pesa Daraja SDK]https://github.com/jumaallan/AndroidMPesaAPI libraries. Hence, has full support for Android.
+Nativescript-Mpesa provides a wrapper that incorporate payments using Mpesa from within your {N} applications. The integration is achieved using the [Android M-Pesa Daraja SDK](https://github.com/jumaallan/AndroidMPesaAPI) libraries. Hence, has full support for Android.
 
 # Usage
 ### Setup
