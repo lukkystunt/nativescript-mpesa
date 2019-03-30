@@ -9,21 +9,19 @@ First import package into the main-page's model or app.component as the case may
 ```typescript
     import { Mpesa } from "nativescript-mpesa";
 ```
-Then create an instance of NSPaystack.
+Then create an instance of Mpesa.
 
 ```javascript
      const mpesa = new Mpesa();
 ```
 
-Initialize the instance with the CustomerKey,CustomerSecret gotten from [Safaricom]https://developer.safaricom.co.ke/test_credentials and Env
+Initialize the instance with the CustomerKey,CustomerSecret gotten from [Safaricom](https://developer.safaricom.co.ke/test_credentials) and Env
 
 Note Env could be `SANDBOX` or `PRODUCTION`
 
 ```javascript
-    mpesa.initialize("dRSvS4nnTGU8vf1V8jUHfu9BW6AAxl83","WQFHurC4OsVBYJQt","SANDBOX")
+    mpesa.initialize(CONSUMER_KEY, CONSUMER_SECRET, Env)
 ```
-
-Note The first parameter needed to initialize is `CustomerKey` second is `CustomerSecret` and third is the environment eg `SANDBOX`
 ### Making Payment
 ```javascript
     const mpesa = new Mpesa();
