@@ -1,7 +1,7 @@
 {
     "name": "nativescript-mpesa",
     "version": "1.0.0",
-    "description": "Your awesome NativeScript plugin.",
+    "description": "Nativescript plugin to make payment with mpesa.",
     "main": "mpesa",
     "typings": "index.d.ts",
     "nativescript": {
@@ -35,11 +35,16 @@
         "NativeScript",
         "JavaScript",
         "Android",
-        "iOS"
+        "iOS",
+        "Mpesa",
+        "Payments",
+        "Kenya",
+        "merchants",
+        "ecommerce"
     ],
     "author": {
         "name": "Alebiosu Lukmon",
-        "email": "youremail@yourdomain.com"
+        "email": "alebiosulekan@gmail.com"
     },
     "bugs": {
         "url": "https://github.com/lukkystunt/nativescript-mpesa/issues"
