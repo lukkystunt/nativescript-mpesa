@@ -7,7 +7,7 @@ Nativescript-Mpesa provides a wrapper that incorporate payments using Mpesa from
 First import package into the main-page's model or app.component as the case may be for either {N} Core or {N} w/ Angular
 
 ```typescript
-    import { NSPaystack } from "nativescript-paystack";
+    import { Mpesa } from "nativescript-mpesa";
 ```
 Then create an instance of NSPaystack.
 
