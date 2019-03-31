@@ -54,7 +54,6 @@ Note Env could be `SANDBOX` or `PRODUCTION`
             }, err => {
               console.log("error", err);
             });
-  }
 ```
 ## Lipa na M-Pesa Online Payment API
 
@@ -84,7 +83,9 @@ The following table highlights the requirements needed by Daraja, as described i
     CustomerMessage: string;
 }
 ```
+# Konwn Error
 
+If you come accross this error message `error TypeError: Cannot read property 'with' of undefined`. Delete the platform folder after adding the plugin.
 ## License
 
 Apache License Version 2.0, January 2004
